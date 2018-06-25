@@ -7,6 +7,7 @@ public class Hotel {
 
     public Hotel(String name) {
         this.name = name;
+        this.rooms = new ArrayList<Room>();
     }
 
     public String getName() {

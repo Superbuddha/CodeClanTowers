@@ -5,11 +5,13 @@ import static org.junit.Assert.assertEquals;
 
 public class BedroomTest {
 
+    Guest guest1;
     Bedroom bedroom1;
 
     @Before
     public void SetUp() throws Exception{
-        bedroom1 = new Bedroom("Room 1", 1,"Double Room");
+        guest1 = new Guest ("Joanna");
+        bedroom1 = new Bedroom("Room 1", 1, "Single Room",150);
     }
 
     @Test
@@ -22,7 +24,11 @@ public class BedroomTest {
     }
     @Test
     public void hasType(){
-        assertEquals("Double Room", bedroom1.type);
+        assertEquals("Single Room", bedroom1.type);
+    }
 
+    @Test
+    public void roomHasNightlyRate() {
+        assertEquals(150, bedroom1.getNightlyRate());
     }
 }

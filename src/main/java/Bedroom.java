@@ -1,13 +1,28 @@
-public class Bedroom extends Room{
+public class Bedroom extends Room {
 
-    private String type;
+    public String type;
+    private int nightlyRate;
 
-    //    the following line might be redundant
-public Bedroom(String name, int capacity) {
+    public Bedroom(String name, int capacity, String type, int i) {
         super(name, capacity);
-        public Bedroom (String type);
-        
         this.type = type;
+        this.nightlyRate = nightlyRate;
+    }
 
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public int getNightlyRate() {
+        return nightlyRate;
+    }
+
+    public void setNightlyRate(int nightlyRate) {
+        this.nightlyRate = nightlyRate;
     }
 }
